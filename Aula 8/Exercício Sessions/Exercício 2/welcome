@@ -1,0 +1,28 @@
+<?php
+session_start(); // Inicia a sessão
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $ano_nascimento = $_POST['ano_nascimento'];
+
+    // Calcula a idade
+    $idade = date("Y") - $ano_nascimento;
+
+    // Armazena as informações na sessão
+    $_SESSION['nome'] = $nome;
+    $_SESSION['idade'] = $idade;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem-vindo</title>
+</head>
+<body>
+    <h1>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h1>
+    <p>Você tem <?php echo $_SESSION['idade']; ?> anos.</p>
+</body>
+</html>
+
