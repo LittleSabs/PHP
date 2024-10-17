@@ -1,0 +1,10 @@
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+INSERT INTO usuarios (username, password) VALUES ('admin', '$2y$10$e0MYsYt0XYOnJtEwdHLZzOHHDUPFg1u2ltZlR8oC4J20R8IpB3V/.');
+INSERT INTO usuarios (username, password) VALUES ('user1', '$2y$10$J9g2BzjNQojRAIlkJHsPOeJXGA/2nbP4oaN1xFMF5hxshxZ2fMZ5K');
+show databases;
+
+INSERT INTO usuarios (username, password) VALUES ('user', 'banana');
